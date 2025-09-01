@@ -23,9 +23,10 @@ function App() {
     }
   ]
 
+  const devsOrdenados = [...devs].sort((a, b) => a.nome.localeCompare(b.nome));
   return (
     <>
-      {devs.map((dev, index) => (
+      {devsOrdenados.map((dev, index) => (
         <CardProfile key={index} {...dev} />
       ))}
     </>
